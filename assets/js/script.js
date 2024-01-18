@@ -33,7 +33,6 @@ if(localStorage.getItem("tasks")){
 
 // Retrieve the ul element which is the list
 let itemsList = document.getElementById("list");
-
 // If the retrieved list from localstorage is not empty, add the elements to the list from the array
 if(myItems != null)
 {
@@ -148,10 +147,16 @@ function addItem(item_text){
     }
      // Get the input
 
-     var myItems = JSON.parse(localStorage.getItem("tasks"));
+    //var myItems = JSON.parse(localStorage.getItem("tasks"));
+    let myItems;
+
+    if (localStorage.getItem("tasks")) {
+        myItems = JSON.parse(localStorage.getItem("tasks"));
+    } else {
+        myItems = [];
+    }
     if(myItems && !isInArray(task, myItems))
     {
-    
         if(myItems){
             myItems.push(task);
          }
