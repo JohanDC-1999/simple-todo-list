@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans&display=swap');
 #title{
   font-family: 'Anton', sans-serif;
-  -webkit-text-stroke: .4px black;
 }
 
 #empty-list-text{
@@ -13,15 +12,26 @@
 
 
 #todo-container{
-  background-image: url(/assets/img/hero-image.jpg);
+  background-image: url('https://source.unsplash.com/random/?nature'); /* Use unsplash.com api to get an image using query (nature as an example) */
+  /* background-image: url(/assets/img/hero-image.jpg); */
   min-height: 100vh;
   max-height: fit-content;
   background-size: cover;
-
-  
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+/* #refreshButton{
+  position: absolute;
+  bottom: 30px;
+  padding: 10px 15px;
+} */
+
+#inputRow{
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
 }
 
 #todo-area{
